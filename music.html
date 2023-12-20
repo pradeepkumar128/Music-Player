@@ -13,22 +13,22 @@
     />
     <title>Music Player</title>
   </head>
-  <body>
-    <div class="main_div">
-      <div class="music_container">
-        <h2 id="title">Lotus Lane</h2>
-        <h3 id="artist">The Laylist</h3>
-        <div class="img_container">
-          <img src="./ImageMusic/a.jpg" alt="" />
-        </div>
-        <audio src="./Music/music1.mp3" ></audio>
+  <div class="main_div">
+    <div class="music_container">
+      <h2 id="title">Lotus Lane</h2>
+      <h3 id="artist">The Laylist</h3>
+      <div class="img_container">
+        <img src="./ImageMusic/music1.jpg" alt="" id="albumArt" class="anime" />
+      </div>
 
-        <div class="music_controls">
-          <i class="fa-solid fa-backward" id="prev" title="Privious"></i>
-          <i class="fa-solid fa-play main_button" title="Play" id="play"></i>
-          <i class="fa-solid fa-forward" id="next" title="Next"></i>
-        </div>
+      <audio src="./music/music1.mp3" id="musicPlayer"></audio>
+
+      <div class="music_controls">
+        <i class="fas fa-backward" id="prev" title="Previous"></i>
+        <i class="fas fa-play main_button" title="Play" id="play"></i>
+        <i class="fas fa-forward" id="next" title="Next"></i>
       </div>
     </div>
-  </body>
+  </div>
+  <script src="./App.js"></script>
 </html>
