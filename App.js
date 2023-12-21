@@ -6,7 +6,6 @@ const title = document.getElementById("title");
 const prev = document.getElementById("prev");
 const next = document.getElementById("next");
 
-
 const songs = [
   {
     name: "128-Ram Siya Ram - Sachet Tandon 128 Kbps",
@@ -88,7 +87,6 @@ const songs = [
     title: "Ram Siya Ram2",
     artist: "Adipurush",
   },
-
 ];
 
 let isPlaying = false;
