@@ -1,4 +1,4 @@
-const music = document.querySelector("audio");
+const music = document.getElementById("musicPlayer");
 const play = document.getElementById("play");
 const img = document.querySelector("img");
 const artist = document.getElementById("artist");
@@ -6,7 +6,13 @@ const title = document.getElementById("title");
 const prev = document.getElementById("prev");
 const next = document.getElementById("next");
 
+
 const songs = [
+  {
+    name: "128-Ram Siya Ram - Sachet Tandon 128 Kbps",
+    title: "Ram Siya Ram",
+    artist: "Sachet Tandon",
+  },
   {
     name: "O Maahi Dunki 128 Kbps",
     title: "O Maahi Dunki",
@@ -77,12 +83,17 @@ const songs = [
     title: "Channa Ve",
     artist: "Akhil Sachdeva",
   },
+  {
+    name: "128-Ram Siya Ram - Adipurush 128 Kbps",
+    title: "Ram Siya Ram2",
+    artist: "Adipurush",
+  },
 
 ];
 
 let isPlaying = false;
+let songIndex = 0;
 
-// for Play
 const playMusic = () => {
   isPlaying = true;
   music.play();
@@ -90,7 +101,6 @@ const playMusic = () => {
   img.classList.add("anime");
 };
 
-// for Pause
 const pauseMusic = () => {
   isPlaying = false;
   music.pause();
@@ -102,17 +112,12 @@ play.addEventListener("click", () => {
   isPlaying ? pauseMusic() : playMusic();
 });
 
-// change song
-
-const loadSong = (songs) => {
-  title.textContent = songs.title;
-  artist.textContent = songs.artist;
-  music.src = "./music/" + songs.name + ".mp3";
-  img.src = "./ImageMusic/" + songs.name + ".jpg";
+const loadSong = (song) => {
+  title.textContent = song.title;
+  artist.textContent = song.artist;
+  music.src = `./music/${song.name}.mp3`;
+  img.src = `./ImageMusic/${song.name}.jpg`;
 };
-
-songIndex = 0;
-loadSong(songs);
 
 const nextSong = () => {
   songIndex = (songIndex + 1) % songs.length;
@@ -128,3 +133,6 @@ const prevSong = () => {
 
 next.addEventListener("click", nextSong);
 prev.addEventListener("click", prevSong);
+
+loadSong(songs[songIndex]);
+pauseMusic();
