@@ -6,23 +6,78 @@ const title = document.getElementById("title");
 const prev = document.getElementById("prev");
 const next = document.getElementById("next");
 
-
 const songs = [
   {
-    name: "music1",
-    title: "music1",
-    artist: "amit",
+    name: "O Maahi Dunki 128 Kbps",
+    title: "O Maahi Dunki",
+    artist: "Arijit Singh",
   },
   {
-    name: "music2",
-    title: "music2",
-    artist: "sumit",
+    name: "Paagal Badshah 128 Kbps",
+    title: "Paagal Badshah",
+    artist: "Badshah",
   },
   {
-    name: "music3",
-    title: "music3",
-    artist: "aditya",
+    name: "Banda Dunki 128 Kbps",
+    title: "Banda Dunki",
+    artist: "Arijit Singh",
   },
+  {
+    name: "Gulabi Aankhen Universally Sanam 128 Kbps",
+    title: "Gulabi Aankhen",
+    artist: "Sanam",
+  },
+  {
+    name: "Lutt Putt Gaya Dunki 128 Kbps",
+    title: "Lutt Putt Gaya ",
+    artist: "Arijit Singh",
+  },
+  {
+    name: "Milo Na Tum Milo Na Tum Gajendra Verma 128 Kbps",
+    title: "Milo Na Tum Milo Na Tum ",
+    artist: "Gajendra Verma",
+  },
+  {
+    name: "128-Braat - Guri 128 Kbps",
+    title: "Braat",
+    artist: "Guri",
+  },
+  {
+    name: "128-Firse Machayenge - Emiway Bantai 128 Kbps",
+    title: "Firse Machayenge",
+    artist: "Emiway Bantai",
+  },
+  {
+    name: "128-Naach Meri Rani - Guru Randhawa 128 Kbps",
+    title: "Naach Meri Rani",
+    artist: "Guru Randhawa",
+  },
+  {
+    name: "128-O Jaan Waale - Akhil Sachdeva 128 Kbps",
+    title: "O Jaan Waale",
+    artist: "Akhil Sachdeva",
+  },
+  {
+    name: "128-Surma Surma - Guru Randhawa 128 Kbps",
+    title: "Surma Surma",
+    artist: "Guru Randhawa",
+  },
+  {
+    name: "128-Tere Karke - Guri 128 Kbps",
+    title: "Tere Karke",
+    artist: "Guri",
+  },
+  {
+    name: "128-Teri Ban Jaungi Reprise - Tulsi Kumar, Akhil Sachdeva 128 Kbps",
+    title: "Teri Ban Jaungi Reprise",
+    artist: "Tulsi Kumar, Akhil Sachdeva",
+  },
+  {
+    name: "192-Channa Ve - Bhoot - Part One The Haunted Ship 192 Kbps",
+    title: "Channa Ve",
+    artist: "Akhil Sachdeva",
+  },
+
 ];
 
 let isPlaying = false;
@@ -34,7 +89,6 @@ const playMusic = () => {
   play.classList.replace("fa-play", "fa-pause");
   img.classList.add("anime");
 };
-
 
 // for Pause
 const pauseMusic = () => {
@@ -74,6 +128,3 @@ const prevSong = () => {
 
 next.addEventListener("click", nextSong);
 prev.addEventListener("click", prevSong);
-
-
-
